@@ -22,12 +22,12 @@ def deCode(url):
     d = url.translate(trantab)
     return d
 
-keywords="长腿美女"
+keywords="油菜花"
 path=unicode(r'D:\bdimg\%s'%keywords,'utf-8')
 print(path)
 if not os.path.exists(path):
     os.makedirs(path)
-i=30
+i=0
 while i<=1000:
     url='http://image.baidu.com/search/acjson?tn=resultjson_com&ipn=rj&ct=201326592&is=&fp=result&queryWord=%s&cl=2&lm=-1&ie=utf-8&oe=utf-8&adpicid=&st=-1&z=&ic=0&word=%s&s=&se=&tab=&width=&height=&face=0&istype=2&qc=&nc=1&fr=&pn=%s&rn=30&gsm=1000000001e&1484808640351= HTTP/1.1'%(urllib.quote(keywords),urllib.quote(keywords),i)
     print(url)
